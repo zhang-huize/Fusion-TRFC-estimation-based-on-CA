@@ -32,7 +32,7 @@ Fusion-TRFC-estimation-based-on-CA/
 ```
 
 使用说明  
-运行train_dyn_trasnsformer.py 进行动力学预训练（可选）
+运行train_dyn_trasnsformer.py 进行动力学预训练（可选）  
 运行 train_dyn_bias_drop_lr_40Hz.py 训练估计模型。  
 运行 estimate-feature.py 对 test 文件夹中的样本进行估计。
 
