@@ -27,35 +27,34 @@ Fusion-TRFC-estimation-based-on-CA/
 │   └── ...
 │
 ├── train_dyn_bias_drop_lr_40Hz.py          # 模型训练脚本
-├── train_dyn_transformer.py                # 动力学预训练脚本 dynamics pre-train
+├── train_dyn_transformer.py                # 动力学预训练脚本
 └── estimate-feature.py                     # 测试样本估计
 ```
 
-## Usage
+使用说明  
+运行train_dyn_trasnsformer.py 进行动力学预训练（可选）
+运行 train_dyn_bias_drop_lr_40Hz.py 训练估计模型。  
+运行 estimate-feature.py 对 test 文件夹中的样本进行估计。
 
-- Run `train_dyn_bias_drop_lr_40Hz.py` to train the estimation model.
-- Run `estimate-feature.py` to estimate samples in the `test` folder.
+数据引用
+本项目使用了以下数据集：
 
-## Data References
+极端路面图像数据集（Extreme-Road-Image-Dataset）
+@article{zhao2025friction,
+author={S. Zhao and J. Zhang and Y. Jiang and C. He and J. Han},
+title={Tire-Road Friction Coefficients Adaptive Estimation through Image and Vehicle Dynamics Integration},
+journal={Mechanical Systems and Signal Processing},
+volume={224},
+pages={112039},
+year={2025},
+doi={10.1016/j.ymssp.2024.112039}
+}
 
-The following datasets are used in this project:
-
-1. **Extreme-Road-Image-Dataset**  
-   @article{zhao2025friction,
-     author={S. Zhao and J. Zhang and Y. Jiang and C. He and J. Han},
-     title={Tire-Road Friction Coefficients Adaptive Estimation through Image and Vehicle Dynamics Integration},
-     journal={Mechanical Systems and Signal Processing},
-     volume={224},
-     pages={112039},
-     year={2025},
-     doi={10.1016/j.ymssp.2024.112039}
-   }
-
-2. **Extreme_Driving_Conditions_Dataset**  
-   @misc{extreme_driving_dataset_2026,
-     title={Extreme Driving Dataset: Multi-Modal Episodes for Critical and Adverse-Condition Driving},
-     author={Zhao, Shiyue and Li, Xinhan and Jiang, Yuhong and He, Chengkun and Zhang, Junzhi},
-     howpublished={Tsinghua University Intelligent Chassis Team},
-     year={2026}
-   }  
-   Available at: [https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset](https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset)
+极端驾驶条件数据集（Extreme_Driving_Conditions_Dataset）
+@misc{extreme_driving_dataset_2026,
+title={Extreme Driving Dataset: Multi-Modal Episodes for Critical and Adverse-Condition Driving},
+author={Zhao, Shiyue and Li, Xinhan and Jiang, Yuhong and He, Chengkun and Zhang, Junzhi},
+howpublished={Tsinghua University Intelligent Chassis Team},
+year={2026}
+}
+获取地址：https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset
